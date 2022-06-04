@@ -3,11 +3,11 @@ import { CommentContentContainer } from "../CommentCard.styled";
 import CommentContentUser from "./CommentContentUser";
 import CommentContentText from "./CommentContentText";
 
-const CommentContent = () => {
+const CommentContent = (props) => {
   return (
     <CommentContentContainer>
-      <CommentContentUser />
-      <CommentContentText />
+      <CommentContentUser username = {props.username} avatar = {props.avatar} />
+      <CommentContentText content = {props.content} />
     </CommentContentContainer>
   );
 };

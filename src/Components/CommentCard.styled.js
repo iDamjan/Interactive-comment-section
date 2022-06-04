@@ -9,7 +9,7 @@ export const CommentContainer = styled.div`
   background-color: white;
   height: 170px;
   border-radius: 15px;
-  box-shadow: 2px 2px 20px gray;
+  box-shadow: 1px 2px 20px gray;
   padding: 30px;
   margin:2rem 0;
 `;
@@ -71,15 +71,35 @@ export const CommentUser = styled.div`
 export const CommentText = styled.div`
   grid-column: 1/-1;
   grid-row: 2/-1;
+  p{
+    color:hsla(211, 10%, 45%, 0.9);
+    margin-left:10px;
+    margin-right:70px;
+    font-weight:300;
+  }
 `;
-export const ReplyButton = styled.div`
+export const ReplyButton = styled.button`
   display: flex;
   align-items: center;
   margin-left: auto;
   color: hsl(238, 40%, 52%);
-
-  img {
+  border-radius:8px;
+  padding: 0px 10px;
+  border:none;
+  height:45px;
+  background-color:white;
+  svg {
     margin-right: 6px;
     width: 15px;
+    fill:hsl(238, 40%, 52%);
   }
+  &:hover{
+    color:white;
+    background-color:hsl(238, 40%, 52%);
+    cursor:pointer;
+    svg{
+      fill:white;
+    }
+  }
+  
 `;
